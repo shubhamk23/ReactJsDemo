@@ -1,12 +1,17 @@
 
 import './App.css';
 import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
 
 function App() {
   // Here we can return only one tag (This is JSX)
   return (
     <>
-<Navbar title="TextUtils" aboutText="about us"/>
+    <Navbar title="TextUtils"/>
+    <div className="container my-3">
+      <TextForm heading="Enter the text to analyze below"/>
+    </div>
+
 {/* <Navbar/> */}
     </>
 

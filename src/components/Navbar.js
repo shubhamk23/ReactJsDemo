@@ -37,5 +37,5 @@ Navbar.propTypes = {
 }
 Navbar.defaultProps = {
   title: "Set Title Here",
-  aboutText: "About text here"
+  aboutText: "About"
 }
