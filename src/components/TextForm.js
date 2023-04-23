@@ -14,12 +14,14 @@ export default function TextForm(props) {
         // setText("You have clicked on handleUpClick")
         let newtext = text.toUpperCase()
         setText(newtext);
+        props.showAlert("Converted to uppercase!", "success");
     }
     const handleLOWClick = () => {
         // console.log("Uppercase was clicked:- "+text);
         // setText("You have clicked on handleUpClick")
         let newtext = text.toLowerCase()
         setText(newtext);
+        props.showAlert("Converted to lowercase!", "success");
     }
 
     const handleClearClick = () => {
@@ -27,6 +29,8 @@ export default function TextForm(props) {
         // setText("You have clicked on handleUpClick")
         let newtext = '';
         setText(newtext);
+        props.showAlert("Text is cleared!", "success");
+
     }
     const handleUniqueClick = () => {
         // console.log("Uppercase was clicked:- "+text);
@@ -44,6 +48,7 @@ export default function TextForm(props) {
         const str1 = Array.from(newtextset).join(' ');
         console.log(str1)
         setText(str1);
+        props.showAlert("Unique word has founded!", "success");
     }
     // const handleCountWord = () => {
     //     let wordCount = text.split(" ")
@@ -63,11 +68,15 @@ export default function TextForm(props) {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text is Copied to clipboard!", "success");
+
     }
 
     const handleExtraSpace = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
+        props.showAlert("Extra Spaces Removed", "success");
+
     }
     // This is used to type text in realtime
     const handleOnChange = (event) => {
